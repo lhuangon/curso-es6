@@ -6,20 +6,51 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-alert('Teste');
+/*class List {
+    constructor() {
+        this.data = []
+    }
 
-var Teste = /*#__PURE__*/function () {
-  function Teste() {
-    _classCallCheck(this, Teste);
+    add(data) {
+        this.data.push(data)
+        console.log(this.data)
+    }
+}
+
+class TodoList extends List {
+    constructor() {
+        super();
+
+        this.usuario = 'Diego'
+    }
+
+    mostraUsuario() {
+        console.log(this.usuario)
+    }
+}
+
+var MinhaLista = new TodoList();
+
+document.getElementById('novoTodo').onclick = function() {
+    MinhaLista.add('novo todo');
+}
+
+MinhaLista.mostraUsuario();*/
+var Matematica = /*#__PURE__*/function () {
+  function Matematica() {
+    _classCallCheck(this, Matematica);
   }
 
-  _createClass(Teste, [{
-    key: "metodo",
-    value: function metodo() {}
-  }, {
-    key: "outro",
-    value: function outro() {}
+  _createClass(Matematica, null, [{
+    key: "soma",
+    value: function soma(a, b) {
+      //quando temos o uma classe static, ela não enxerga o que está foda dela
+      //ele só funciona para gente passar informação pra ele e ele nos dá um retorno, não precisamos de construtor
+      return a + b;
+    }
   }]);
 
-  return Teste;
+  return Matematica;
 }();
+
+console.log(Matematica.soma(2, 8));
